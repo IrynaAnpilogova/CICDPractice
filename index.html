@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <div>
+    <form onsubmit="return validateForm();">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="submit">Login</button>
+    </form>
+    </div>
+    <div id="message"></div>
+    <div id="logout" style="display: none;">
+        <button onclick="logout()">Logout</button>
+    </div>
+  </body>
+</html>
