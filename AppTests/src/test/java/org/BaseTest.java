@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.net.MalformedURLException;
 import java.net.URL;
 // import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
@@ -33,11 +36,8 @@ public class BaseTest {
         // For example, to run Chrome in headless mode:
         options.addArguments("--headless");
 
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-
 //        // Create a new instance of the RemoteWebDriver
-//        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        driver = new RemoteWebDriver(new URL("http://my-selenium:4444/wd/hub"), options);
 
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
