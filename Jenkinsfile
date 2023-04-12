@@ -32,9 +32,7 @@ pipeline {
     }
     post { 
         cleanup { 
-            steps {
-                sh 'docker stop my-app my-selenium'
-            }
+            sh 'docker stop my-app my-selenium'
         }
     }
 }
