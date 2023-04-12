@@ -22,7 +22,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 sh '''
-                docker run -it --link my-selenium:my-selenium -v ${PWD}/AppTests:/data tests-image mvn clean test
+                docker run --link my-selenium:my-selenium -v ${PWD}/AppTests:/data tests-image mvn clean test
                 '''
                 // Archive test report
                 junit '**/target/surefire-reports/TEST-*.xml'
