@@ -1,3 +1,18 @@
+# Start Jenkins
+```
+JENKINS_HOME=$PWD/home JAVA_HOME=$PWD/Java ./Java/bin/java -jar jenkins.war
+```
+
+# Run SMEE proxy
+Create new channel at https://smee.io/ and run local proxy:
+```
+# Install smee client:
+npm install --global smee-client
+
+# Run local proxy and forward all calls to Jenkins on localhost
+smee -u https://smee.io/ohwYwg85jYHUmIkV -t http://localhost:8080/github-webhook/
+```
+
 # Build App Docker image
 ```
 cd App
