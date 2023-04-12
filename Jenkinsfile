@@ -29,9 +29,11 @@ pipeline {
                 junit '**/target/surefire-reports/TEST-*.xml'
             }
         }
-        stage('Stop containers') {
-            steps {
-                sh 'docker stop my-app my-selenium'
+        post { 
+            cleanup { 
+                steps {
+                    sh 'docker stop my-app my-selenium'
+                }
             }
         }
     }
