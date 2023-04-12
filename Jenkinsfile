@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''cd App &&
                 docker build -t app-image . &&
-                cd AppTests &&
+                cd ../AppTests &&
                 docker build -t tests-image . &&
                 docker pull selenium/standalone-chrome
                 '''
