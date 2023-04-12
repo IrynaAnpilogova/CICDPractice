@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Start containers') {
             steps {
-                sh '''docker stop my-app my-selenium &&
+                sh '''docker stop my-app my-selenium ;
                 docker run -d --rm -p 8081:80 --name my-app app-image &&
                 docker run -d --rm -p 4444:4444 --link my-app:my-app --name my-selenium selenium/standalone-chrome
                 '''
