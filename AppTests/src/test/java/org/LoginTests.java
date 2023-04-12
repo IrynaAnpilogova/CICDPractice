@@ -9,10 +9,9 @@ import org.openqa.selenium.By;
 
 public class LoginTests extends BaseTest {
 
-
     @BeforeEach
     void setUp() {
-        driver.get("file:///Users/anpilog/Desktop/Irina/Projects/App/index.html");
+        driver.get("http://my-app:80");
     }
 
     //
